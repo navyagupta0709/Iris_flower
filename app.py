@@ -5,7 +5,7 @@ import os
 
 st.title("Navya's Iris Prediction App 🌸")
 
-model_path = os.path.join(os.path.dirname(_file_), "model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
 model = pickle.load(open(model_path, "rb"))
 
 sepal_length = st.number_input("Sepal Length")
