@@ -172,6 +172,12 @@ results = pd.DataFrame({
 result_df = results.sort_values(by='Score', ascending=False)
 result_df = result_df.set_index('Score')
 result_df.head(9)
+import pickle
+
+# Assume model already trained above
+pickle.dump(model, open("model.pkl", "wb"))
+
+print("Model saved successfully!")
 
 #Hence I will use Naive Bayes algorithms for training my model.
 
